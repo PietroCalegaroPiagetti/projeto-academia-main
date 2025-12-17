@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Physical Center</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body onload="verificarAcesso()"> 
+
+<header>
+    <div class="logo">Physical Center</div>
+    <nav>
+        <button class="menu-btn"><i class="fa-solid fa-dumbbell"></i> Treinos</button>
+        <button class="menu-btn"><i class="fa-solid fa-chart-line"></i> Progresso</button>
+        <button class="menu-btn"><i class="fa-solid fa-tags"></i> Planos</button>
+        <button class="menu-btn primary-btn" onclick="logout()"><i class="fa-solid fa-sign-out-alt"></i> Sair</button> 
+    </nav>
+</header>
+
+<main class="dashboard-content">
+    
+    <section class="carrossel" data-carousel-id="dashboard">
+        <button class="car-btn prev">❮</button> 
+        <div class="slides">
+            <div class="slide active"><img src="https://images.unsplash.com/photo-1550345886-f02758117926?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1541534741688-604b150035bc?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></div>
+        </div>
+        <button class="car-btn next">❯</button> 
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <section class="treino-dia">
+        <h2><i class="fa-solid fa-bolt"></i> Seu Treino de Hoje</h2>
+        <div class="treino-box">
+            <h3>Peito e Bíceps - Foco em Hipertrofia</h3>
+            <p><strong>1. Supino reto:</strong> 4 séries de 12 repetições</p>
+            <p><strong>2. Supino inclinado com halteres:</strong> 4 séries de 10 repetições</p>
+            <p><strong>3. Rosca direta:</strong> 4 séries de 12 repetições</p>
+            <p><strong>4. Rosca martelo:</strong> 4 séries de 10 repetições</p>
+            <p class="ultima-linha">Descanse 60 segundos entre as séries.</p>
+        </div>
+    </section>
+
+    <section class="evolucao">
+        <h2><i class="fa-solid fa-signal"></i> Acompanhe Seu Progresso</h2>
+        <div class="evolucao-grid">
+            <div class="card">
+                <h3>Peso Corporal</h3>
+                <p>75 kg</p>
+                <button>Atualizar <i class="fa-solid fa-pen-to-square"></i></button>
+            </div>
+            <div class="card">
+                <h3>Carga Máxima</h3>
+                <p>Supino 40kg</p>
+                <button>Atualizar <i class="fa-solid fa-pen-to-square"></i></button>
+            </div>
+            <div class="card">
+                <h3>Medidas (Braço)</h3>
+                <p>36 cm</p>
+                <button>Atualizar <i class="fa-solid fa-pen-to-square"></i></button>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Physical Center. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/academiaphysicalcenter/" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script> 
+</body>
+</html>

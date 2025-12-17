@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Physical Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="auth-card" id="authCard" data-mode="login">
+        <h2 id="authTitle">Login</h2>
+
+        <div class="login-only">
+            <div class="auth-group">
+                <label>Email:</label>
+                <input type="email" id="emailLogin" placeholder="seu@email.com">
+            </div>
+            <div class="auth-group">
+                <label>Senha:</label>
+                <input type="password" id="senhaLogin" placeholder="••••••••">
+            </div>
+            <button class="auth-btn" onclick="handleLogin()">Entrar</button>
+        </div>
+
+        <div class="cadastro-only">
+            <div class="auth-group">
+                <label>Nome completo:</label>
+                <input type="text" id="nomeCompleto" placeholder="Seu nome">
+            </div>
+            <div class="auth-group">
+                <label>Email:</label>
+                <input type="email" id="emailCadastro" placeholder="seu@email.com">
+            </div>
+            <div class="auth-group">
+                <label>Senha:</label>
+                <input type="password" id="senhaCadastro" placeholder="Crie uma senha">
+            </div>
+            <div class="auth-group">
+                <label>Escolha um plano:</label>
+                <select class="auth-select" id="plano">
+                    <option value="">Selecione um plano</option>
+                    <option value="basico">Plano Básico</option>
+                    <option value="pro">Plano Pro</option>
+                    <option value="vip">Plano VIP</option>
+                </select>
+            </div>
+            <button class="auth-btn" onclick="iniciarPagamento()">
+                Prosseguir para pagamento
+            </button>
+        </div>
+
+        <div class="auth-footer">
+            <span class="login-only">
+                Não tem conta? <a href="#" onclick="toggleAuth()">Cadastre-se</a>
+            </span>
+            <span class="cadastro-only">
+                Já tem conta? <a href="#" onclick="toggleAuth()">Fazer login</a>
+            </span>
+            
+            <hr style="border-color: #243249; margin: 10px 0;">
+            <a href="index.html" style="color: #007bff; text-decoration: none; font-size: 14px; font-weight: 700;">
+                ← Voltar para a Home
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

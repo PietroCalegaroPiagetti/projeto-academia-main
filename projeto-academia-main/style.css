@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; 
+}
+
+body {
+    background: #0f1624;
+    color: white;
+}
+
+/* --- HEADER --- */
+header {
+    width: 100%;
+    padding: 20px 50px; 
+    background: #111c33; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+header .logo {
+    font-size: 26px; 
+    font-weight: 700; 
+    color: #007bff; 
+}
+
+header nav .menu-btn {
+    margin-left: 15px;
+    padding: 8px 18px;
+    background: #243249;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 600;
+}
+
+header nav .menu-btn:hover { 
+    background: #4da3ff; 
+}
+
+header nav a {
+    text-decoration: none; 
+}
+
+/* Botão de destaque no Header (Login/Sair) */
+.primary-btn {
+    background: #007bff !important; 
+}
+.primary-btn:hover {
+    background: #0056b3 !important; 
+}
+
+/* --- CARROSSEL --- */
+.carrossel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 40px 0; 
+}
+
+.slides {
+    transition: transform 0.5s ease;
+    overflow: hidden; 
+    height: 450px; 
+}
+
+.slide {
+    position: relative;
+    display: none; 
+}
+.carrossel[data-carousel-id="home"] .slide.active { display: block; }
+
+
+.slide img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6) 100%); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 56px; 
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    font-weight: 900;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    color: #e0e6f0;
+    margin-bottom: 30px;
+    max-width: 700px;
+    font-weight: 300;
+}
+
+.hero-btn {
+    padding: 14px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px; 
+    border: none;
+    background: #007bff; /* Azul primário */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.hero-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Navegação do Carrossel */
+.btn-prev, .btn-next, .car-btn { 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.7); 
+    border: none;
+    color: white;
+    font-size: 40px; 
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.btn-prev, .car-btn.prev { left: 10px; }
+.btn-next, .car-btn.next { right: 10px; }
+
+.indicators, .dots { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+}
+.indicators { position: absolute; bottom: 15px; }
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    display: inline-block; 
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.dot.active { opacity: 1; background: #007bff; }
+
+
+/* --- SEÇÕES GERAIS --- */
+section { padding: 50px 50px; } 
+h2 { 
+    margin-bottom: 30px; 
+    font-size: 32px; 
+    color: #007bff; 
+    font-weight: 700;
+    text-align: center;
+}
+
+/* --- SOBRE --- */
+.sobre { text-align: center; }
+.sobre p { 
+    width: 90%; 
+    line-height: 1.6; 
+    max-width: 900px;
+    margin: 0 auto;
+    color: #cfd6e4;
+    font-size: 17px;
+}
+
+/* --- DIFERENCIAIS --- */
+.diferenciais {
+    background: #1a2335; 
+    text-align: center;
+}
+.diferenciais-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+.diferencial-card {
+    background: #111c33; 
+    padding: 30px; 
+    border-radius: 10px;
+    width: 320px;
+    transition: background 0.3s;
+    border: 1px solid #243249;
+}
+.diferencial-card:hover {
+    background: #15203a;
+}
+.diferencial-card i {
+    font-size: 40px; 
+    color: #007bff;
+    margin-bottom: 15px;
+}
+.diferencial-card h3 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.diferencial-card p {
+    color: #aebfd6;
+    font-size: 15px;
+}
+
+/* --- NOSSO ESPAÇO --- */
+.espaco { text-align: center; }
+.espaco-grid { display: flex; gap: 20px; justify-content: center; max-width: 1000px; margin: 0 auto;}
+.espaco-item { flex: 1; height: 300px; overflow: hidden; border-radius: 12px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
+.espaco-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+.espaco-item img:hover { transform: scale(1.05); }
+
+/* --- PLANOS --- */
+.planos { text-align: center; }
+.planos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.plano-card {
+    background: #1a2335;
+    padding: 35px; 
+    width: 320px;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid transparent; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+}
+
+.plano-card h3 { 
+    margin-bottom: 10px; 
+    font-size: 26px;
+    color: #007bff; 
+    font-weight: 800; 
+}
+
+.plano-card .valor {
+    font-size: 36px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 30px; 
+    border-bottom: 1px solid #243249;
+    padding-bottom: 15px;
+}
+
+/* Estilos para a lista de características */
+.plano-caracteristicas {
+    margin-bottom: 30px;
+    text-align: left;
+    min-height: 120px; 
+    display: flex;
+    justify-content: center; 
+}
+
+.plano-caracteristicas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.plano-caracteristicas ul li {
+    padding: 8px 0;
+    color: #cfd6e4;
+    font-size: 16px;
+    line-height: 1.4;
+    border-bottom: 1px dashed #243249;
+}
+
+.plano-caracteristicas ul li:last-child {
+    border-bottom: none;
+}
+
+.plano-card button {
+    margin-top: 20px;
+    width: 100%; 
+    padding: 14px; 
+    background: #007bff; 
+    border: none; 
+    color: white; 
+    font-weight: 700; 
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 16px;
+}
+
+.plano-card button:hover { 
+    background: #0056b3; 
+}
+
+/* DESTAQUE PARA O PLANO PRO */
+.plano-card.destaque {
+    border-color: #007bff;
+    background: #202b3e; 
+    box-shadow: 0 0 25px rgba(0, 123, 255, 0.4); /* Brilho azul */
+}
+
+/* --- CONTATO --- */
+.contato {
+    background: #1a2335; 
+    text-align: center; 
+    padding: 50px 50px; 
+}
+.contato h2 {
+    color: white;
+}
+.contato p {
+    color: #cfd6e4;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+
+/* --- FOOTER --- */
+footer { 
+    background: #111c33; 
+    padding: 30px 50px; 
+    color: #cfd6e4; 
+    border-top: 1px solid #1a2335; 
+}
+.footer-content { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.footer-content p { margin: 0; font-size: 14px; }
+.social-links a { 
+    color: #007bff; 
+    text-decoration: none; 
+    font-size: 14px; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px;
+    transition: color 0.2s;
+}
+.social-links a:hover { color: #4da3ff; }
+
+
+/* --- AUTH/LOGIN --- */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f1624, #111c33);
+}
+
+.auth-card {
+    background: #1a2335;
+    width: 380px; 
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+.auth-card h2 { text-align: center; margin-bottom: 30px; color: #007bff; }
+.auth-group { margin-bottom: 20px; }
+.auth-group label { font-size: 15px; color: #cfd6e4; margin-bottom: 5px; display: block; font-weight: 600; }
+.auth-group input, .auth-select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #243249;
+    background: #111c33;
+    color: white;
+    font-size: 16px;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.auth-btn:hover { background: #0056b3; }
+
+.auth-footer { margin-top: 25px; text-align: center; font-size: 15px; }
+.auth-footer a { color: #007bff; font-weight: 700; text-decoration: none; }
+.auth-card[data-mode="login"] .cadastro-only { display: none; }
+.auth-card[data-mode="cadastro"] .login-only { display: none; }
+
+
+/* --- DASHBOARD SECTIONS --- */
+.carrossel[data-carousel-id="dashboard"] { margin: 25px 0 40px 0; }
+.carrossel[data-carousel-id="dashboard"] .slides { display: flex; height: 380px; } 
+.carrossel[data-carousel-id="dashboard"] .slide img { height: 380px; min-width: 100%; object-fit: cover; }
+.carrossel[data-carousel-id="dashboard"] .car-btn { font-size: 30px; }
+.carrossel[data-carousel-id="dashboard"] .dots { bottom: 10px; } 
+
+.treino-dia, .evolucao { padding: 50px; text-align: center; }
+
+/* Estilo da caixa de treino */
+.treino-box { 
+    background: #1a2335; 
+    padding: 30px; 
+    border-radius: 10px; 
+    width: 90%; 
+    max-width: 800px; 
+    margin: 0 auto;
+    border: 1px solid #243249;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.treino-box h3 { color: #007bff; margin-bottom: 15px; font-size: 24px; font-weight: 700; }
+.treino-box p { color: #e0e6f0; margin-bottom: 8px; font-size: 16px; line-height: 1.5; }
+.treino-box p strong { font-weight: 700; color: white; }
+.treino-box .ultima-linha { 
+    margin-top: 15px; 
+    padding-top: 10px; 
+    border-top: 1px dashed #243249;
+    font-style: italic;
+    color: #aebfd6;
+}
+
+.evolucao-grid { display: flex; gap: 30px; justify-content: center; margin-top: 30px;}
+
+/* Estilo dos cards de evolução (Progresso) */
+.card { 
+    background: #1a2335; 
+    width: 280px; 
+    padding: 30px; 
+    border-radius: 10px; 
+    text-align: center;
+    border: 1px solid #243249;
+    transition: background 0.3s;
+}
+.card:hover {
+    background: #15203a;
+}
+
+.card h3 { color: #4da3ff; margin-bottom: 15px; font-size: 18px; font-weight: 600; }
+.card p { font-size: 32px; font-weight: 900; color: white; margin-bottom: 20px; } 
+.card button { 
+    margin-top: 5px; 
+    width: 100%; 
+    padding: 12px; 
+    background: #007bff; 
+    border: none; 
+    color: white; 
+    border-radius: 6px; 
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.card button:hover {
+    background: #0056b3;
+}
+
+/* --- PAGAMENTO --- */
+.pagamento-info { 
+    margin-bottom: 20px; 
+    background: #111c33; 
+    padding: 20px; 
+    border-radius: 8px; 
+    border: 1px solid #243249;
+}
+.pagamento-info p { margin-bottom: 10px; font-size: 16px; }
+.valor { font-size: 24px; font-weight: 700; color: #007bff; }
