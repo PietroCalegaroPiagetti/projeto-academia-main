@@ -1,6 +1,6 @@
 # Academia Physical Center 
 
-Landing page institucional de uma academia fictícia, desenvolvida com **HTML5**, **CSS3** e **JavaScript**, focada em design moderno, responsividade e experiência do usuário.
+Está Landing page(página de destino) foi desenvolvida com **HTML5**, **CSS3** e **JavaScript**, focada em design moderno, otimização e experiência do usuário.
 
 ---
 
@@ -8,7 +8,7 @@ Landing page institucional de uma academia fictícia, desenvolvida com **HTML5**
 
 Apresentar a academia **Physical Center**, destacando sua proposta, diferenciais, planos de assinatura e informações de contato, utilizando uma interface simples e atrativa.
 
----
+
 
 # Estrutura do Projeto
 
@@ -20,7 +20,7 @@ Apresentar a academia **Physical Center**, destacando sua proposta, diferenciais
 │── login.html
 ```
 
----
+
 
 # Estrutura da Página
 
@@ -33,7 +33,7 @@ Apresentar a academia **Physical Center**, destacando sua proposta, diferenciais
 * **Contato**: Telefone e e-mail
 * **Footer**: Direitos autorais e link para Instagram
 
----
+
 
 # Tecnologias Utilizadas
 
@@ -43,7 +43,6 @@ Apresentar a academia **Physical Center**, destacando sua proposta, diferenciais
 * Font Awesome
 * Imagens do Unsplash
 
----
 
 #  Melhorias Futuras
 
@@ -52,7 +51,7 @@ Apresentar a academia **Physical Center**, destacando sua proposta, diferenciais
 * Área do aluno
 * Dark mode e acessibilidade
 
----
+
 
 # Área de Treinos
 
@@ -70,6 +69,6 @@ Por fim, a seção **Sua Evolução** permite acompanhar o progresso do aluno, e
 
 Essa área transforma o site em uma ferramenta prática de acompanhamento físico e organização de treinos.
 
----
+
 
 © 2025 Physical Center
